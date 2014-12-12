@@ -1,5 +1,9 @@
-language: node_js
-node_js:
-  - "0.10"
+install:
+  - npm install -g jshint jscs
 before_script:
-  - npm install -g grunt-cli
+  - cd ./tests
+  - echo "new Date().toString();" | phantomjs
+script:
+  - jshint ../js/bootstrap-datepicker.js ../js/locales/*.js
+  - jscs -c ../.jscs.json ../js/bootstrap-datepicker.js ../js/locales/*.js
+  - phantomjs run-qunit.js tests.html
