@@ -111,7 +111,7 @@
 		var template = DPGlobal.template
 					.replace(/\{icon-prev\}/g, this.o.iconPrevClass)
 					.replace(/\{icon-next\}/g, this.o.iconNextClass);
-console.log(template);
+
 		this.picker = $(template);
 
 		if(this.o.showArrow) {
@@ -633,8 +633,6 @@ console.log(template);
 				} else {
 
 				}
-
-				console.log(this.o.orientation);
 /*
 			if(this.o.orientation.x !== 'auto') {
 				this.picker.addClass('datepicker-orient-' + this.o.orientation.x);
@@ -670,16 +668,16 @@ console.log(template);
 			}
 
 			this.picker.addClass('datepicker-orient-' + yorient);
-console.log(this.picker.attr('class'));
+
 			if(yorient === 'top') {
 				top -= calendarHeight;
 			} else {
 				top += height;
 			}
 */
-				console.log(['widths', widths]);
-				console.log(['heights', heights]);
-				console.log(['offsets', offsets]);
+//			console.log(['widths', widths]);
+//			console.log(['heights', heights]);
+//			console.log(['offsets', offsets]);
 
 				this.picker.css({
 					top: offsets.y,
